@@ -1,0 +1,20 @@
+name: Manually triggered workflow
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person'
+        required: true
+        default: 'Error'
+      statement:
+        description: 'statement'
+        required: true
+        default: 'Error2'
+
+jobs:
+  say_something:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        echo "${{ github.event.inputs.name }} says: ${{ github.event.inputs.statement }}!"
