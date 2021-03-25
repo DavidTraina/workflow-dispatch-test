@@ -17,4 +17,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-        echo "${{ github.event.inputs.name }} says: ${{ github.event.inputs.statement }}!"
+        echo "${{ github.event.inputs.name }} says: ${{ github.event.inputs.statement }}! EDITED"
